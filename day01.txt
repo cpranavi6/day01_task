@@ -1,0 +1,70 @@
+Write a blog on Difference between HTTP1.1 vs HTTP2
+
+•	HTTP2 loads faster than HTTP1.1
+
+•	HTTP2 is binary, where as HTTP1 is textual.
+
+•	HTTP2 is fully multiplexed, instead of ordered and blocking
+
+•	HTTP2 can, therefore, use one connection for parallelism
+
+•	HTTP2 uses header compression to reduce overhead
+
+•	HTTP2 allows servers to “push” responses proactively into client caches.
+
+•	HTTP2 is secured by default.
+
+
+Write a blog about objects and its internal representation in JavaScript.
+
+
+Objects in JavaScript:
+In JavaScript, objects are composite values that can contain properties and methods. They are used to represent entities, such as real-world objects, concepts, or structures, and are constructed using either the object literal syntax or the constructor syntax.
+
+Internal Representation of Objects:
+Internally, JavaScript objects are implemented as unordered collections of key-value pairs, where the keys are strings or symbols, and the values can be of any data type, including other objects.
+ Internal representation of objects in JavaScript:
+
+1. Property Storage:
+   - Each object has an internal data structure known as the "internal properties."
+   - The internal properties consist of various slots for storing information about the object, including its prototype, class, and more.
+   - The actual properties and methods of an object are stored separately from its internal properties.
+
+2. Prototype Chain:
+   - Objects in JavaScript are linked to a prototype object.
+   - The prototype object acts as a template or blueprint for the object, defining the shared properties and methods that can be accessed by the object.
+   - If a property or method is not found on an object, JavaScript traverses the prototype chain to look for it in the prototype object's properties.
+
+3. Property Access:
+   - Object properties can be accessed using the dot notation (e.g., object.property) or the bracket notation (e.g., object['property']).
+   - When accessing a property, JavaScript first checks if the property exists directly on the object.
+   - If not found, it continues the search up the prototype chain until the property is found or until it reaches the end of the chain (null).
+
+4. Dynamic Nature:
+   - JavaScript objects are dynamic, meaning properties can be added, modified, or deleted at runtime.
+   - This flexibility adapt objects to changing requirements or manipulate their structure as needed.
+
+Conclusion:
+Objects serve as the building blocks of JavaScript, providing a powerful way to represent and manipulate data. Understanding their internal representation allows developers to leverage the language effectively. In JavaScript, objects are implemented as unordered collections of key-value pairs, utilizing internal properties and a prototype chain for property access and inheritance. Their dynamic nature empowers developers to adapt and extend objects as their programs evolve.
+
+
+Using Object Literal: 
+    o	Ex: var Student = {name: “Guvi”, class: 31, roll_no: 1};//storing the data
+    o	From the above example Student is Object.
+    
+•	Using New Keyword:
+        example (property access)
+        var myCar = new Object();
+        myCar.make = 'Ford';
+        myCar.model = 'Mustang';
+        myCar.year = 1969;
+Dot Operator(.) is used to write keys and assign values to it.
+    
+•	Using Object Constructor: is a function which has the same name as the Object.
+        Ex: 
+        Function Student(name, class, roll_no){
+        this.name = name;
+        this.class = class;
+        this.roll_no = roll_no;
+        }
+        var Student1 = new Student("Guvi",31,1);
